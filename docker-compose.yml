@@ -1,0 +1,11 @@
+version: '3.6'
+services: 
+  jupyter:
+      platform: linux/amd64
+      build: .
+      ports: 
+          - 8888:8888
+      volumes:
+          - ./workspace:/home/jovyan/workspace
+      command: jupyter notebook
+
